@@ -3,6 +3,6 @@ backend:
   name: free
   image: docker.io/rkaeffer/codelab-gitops-backend:1.0.0
   containerPort: 8080
-  host: julien-archambault-kcl.codelab.cloud-sp.eu
+  host: julien-archambault-backend.codelab.cloud-sp.eu
   service:
     port: 443
