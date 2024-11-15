@@ -1,8 +1,16 @@
 # Backend configuration
 backend:
-  name: free
+  name: free-back
   image: docker.io/rkaeffer/codelab-gitops-backend:1.0.0
   containerPort: 8080
   host: julien-archambault-backend.codelab.cloud-sp.eu
+  service:
+    port: 443
+
+frontend:
+  name: free-front
+  image: docker.io/rkaeffer/codelab-gitops-frontend:1.0.0
+  containerPort: 4200
+  host: julien-archambault-frontend.codelab.cloud-sp.eu
   service:
     port: 443
