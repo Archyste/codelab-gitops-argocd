@@ -1,23 +1,23 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: #TODO - Nom de votre application - Libre :)
+  name: libre
   namespace: argo-cd
   labels:
-    name: #TODO - Nom de votre application - Libre :)
+    name: libre
 spec:
   project: default
   # Source of the application manifests
   source:
-    repoURL: #TODO - Lien vers votre repository GitHub
-    path: #TODO - Chemin du chart Helm dans votre repository git 
-    targetRevision: #TODO - Branche à cibler de votre repository Git 
+    repoURL: https://github.com/Archyste/codelab-gitops-argocd
+    path: helm-chart 
+    targetRevision: main
     helm:
-      releaseName: #TODO - Nom à donner à votre release helm - Libre :)
+      releaseName: riliz
   # Destination cluster and namespace to deploy the application
   destination:
     name: in-cluster
-    namespace: #TODO - Namespace de déploiement de votre application
+    namespace: kcl-julien-archambault-wk
 
   # Sync policy
   syncPolicy:
