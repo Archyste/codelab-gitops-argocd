@@ -12,7 +12,7 @@ spec:
         paths:
           - path: /
             pathType: Prefix
-            frontend:
+            backend:
               service:
                 name: "{{ .Values.frontend.name }}-service"
                 port:
